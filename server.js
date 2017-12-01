@@ -1,6 +1,5 @@
 var express = require('express')
-// process.env.PORT ||
-var port     = 3000;
+var port     = process.env.PORT || 80;
 var pug = require('pug')
 var axios = require('axios')
 var bodyParser = require('body-parser')
