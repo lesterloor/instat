@@ -20,12 +20,11 @@ require('./app/routes.js')(app); // load our routes and pass in our app and full
 
 app.set('view engine', 'pug');
 app.set('views', './views');
-app.use(express.static(__dirname));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
-app.set(express.static('./public'));
+app.use(express.static('public'))
 
 /////////////////
 

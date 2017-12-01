@@ -1,6 +1,7 @@
 include navigation.pug
-  img(src=searchData.profile_picture)
-  h3 Welcome to #{searchData.username}
+  #Profile
+    img(style="width:120px;height:120px" src=searchData.profile_picture)
+    span @#{searchData.username}
   table  
     tr(class="tableHeader")
       th

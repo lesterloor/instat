@@ -1,5 +1,7 @@
 var axios = require('axios')
 var bodyParser = require('body-parser')
+var express = require('express');
+var path = require('path');
 
 
 module.exports = function(app) {
@@ -7,6 +9,8 @@ module.exports = function(app) {
   app.use(bodyParser.urlencoded({
     extended: true
   }));
+  app.use(express.static('public'))
+
   app.get('/', function(req, res) {
     res.render('index.pug');
 
@@ -17,7 +21,7 @@ module.exports = function(app) {
     axios.get(`https://api.instagram.com/v1/users/self/?access_token=${accessToken}`)
   .then(function (response) {
     var results = response.data.data
-    console.log(response.data.data);
+    // console.log(response.data.data);
     res.render('results.pug',{searchData:results});
   })
   .catch(function (error) {
