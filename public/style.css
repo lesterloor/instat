@@ -179,7 +179,7 @@ h1 {
   visibility: hidden;
 }
 
-#Profile:hover img {
+#Profile:active img {
   -webkit-filter: blur(2px);
   -moz-filter: blur(2px);
   -o-filter: blur(2px);
@@ -188,7 +188,7 @@ h1 {
   opacity: 0.8;
 }
 
-#Profile:hover span {
+#Profile:active span {
   background: rgba(217, 217, 217, 0.52);
   visibility: visible;
   color: #494E52;
