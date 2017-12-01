@@ -1,6 +1,6 @@
 var express = require('express')
 // process.env.PORT ||
-var port     = 8000;
+var port     = 80;
 var pug = require('pug')
 var bodyParser = require('body-parser')
 var app = express()
