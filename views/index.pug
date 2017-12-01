@@ -1,2 +1,5 @@
 include navigation.pug
-  h3 Welcome to my Home page
+  h3 Search for insatgram username
+  form(method='post' action='/submit')
+    input(name="search" value="ifunnymeme.tv" placeholder="Search username")
+    input(type="submit")

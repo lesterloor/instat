@@ -1,0 +1,12 @@
+include navigation.pug
+  img(src=searchData.profile_picture)
+  h3 Welcome to #{searchData.username}
+  ul
+    li
+      span Followers: #{searchData.counts.followed_by}
+    li
+      span Following: #{searchData.counts.follows}
+    li
+      span Uploads: #{searchData.counts.media}
+    li
+      span User ID: #{searchData.id}
