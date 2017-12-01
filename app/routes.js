@@ -28,6 +28,9 @@ module.exports = function(app) {
   })
 
 
+  app.get("/policy", function(req, res) {
+    res.render('policy.pug');
+  });
   app.get("*", function(req, res) {
     res.send('404 error');
   });
