@@ -19,14 +19,23 @@ module.exports = function(app) {
     console.log(req.body.search);
     var accessToken = "5724115162.7b3b2a3.97b6d6e6d0164830845fe2568e967da7"
     axios.get(`https://api.instagram.com/v1/users/self/?access_token=${accessToken}`)
-  .then(function (response) {
-    var results = response.data.data
-    // console.log(response.data.data);
-    res.render('results.pug',{searchData:results});
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
+      .then(function (response) {
+        axios.get(`https://api.instagram.com/v1/users/self/media/recent/?access_token=${accessToken}&count=3`)
+          .then(function (recentMedia) {
+            console.log(recentMedia.data.data);
+            var results = response.data.data
+            var recentMedia = recentMedia.data.data
+            // console.log(response.data.data);
+            res.render('results.pug',{searchData:results,recentMedia: recentMedia});
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+        // console.log(response.data.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
 
 
   })

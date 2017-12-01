@@ -1,5 +1,6 @@
 body{
   background-color: steelblue;
+  height:1000px;
 }
 
 table {
@@ -9,10 +10,11 @@ table {
   /*height: 320px;*/
   border-collapse: collapse;
   border: 1px solid #38678f;
-  margin: 50px auto;
+  margin: 50px auto 5px;
   background: white;
 }
 th {
+  font-size: 14px;
   background: steelblue;
   height: 54px;
   width: 25%;
@@ -42,7 +44,7 @@ td.selected {
   z-index: ;
 }
 td input {
-  font-size: 14px;
+  font-size: 12px;
   background: none;
   outline: none;
   border: 0;
@@ -179,17 +181,73 @@ h1 {
   visibility: hidden;
 }
 
-#Profile:active img {
+#Profile img {
   -webkit-filter: blur(2px);
   -moz-filter: blur(2px);
   -o-filter: blur(2px);
   -ms-filter: blur(2px);
   filter: blur(2px);
-  opacity: 0.8;
+  opacity: .9;
 }
 
-#Profile:active span {
+#Profile span {
   background: rgba(217, 217, 217, 0.52);
   visibility: visible;
-  color: #494E52;
+  color: black;
+}
+
+
+
+.flex-container {
+  position: relative;
+  text-align: center;
+  padding: 0;
+  margin: auto;
+  list-style: none;
+  width: 100%;
+  max-width: 600px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: space-between;
+}
+.flex-container li img {
+  width:100%
+
+}
+.likes {
+    color:black;
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    font-size: 10px;
+}
+
+.flex-item table{
+  height: 0px;
+  margin:0;
+
+}
+.flex-item table tr th {
+  height: 0px;
+  padding: 5px 0;
+  width:100%;
+  background: #d20000;
+}
+.flex-item {
+  background: steelblue;
+  width: 33.3%;
+  /*height: 190px;*/
+  /*padding: 2px;*/
+  list-style: none;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+
 }
