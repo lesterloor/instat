@@ -13,10 +13,10 @@ module.exports = function(app) {
   })
   app.post('/submit', function(req, res) {
     console.log(req.body.search);
-    let accessToken = "5724115162.7b3b2a3.97b6d6e6d0164830845fe2568e967da7"
+    var accessToken = "5724115162.7b3b2a3.97b6d6e6d0164830845fe2568e967da7"
     axios.get(`https://api.instagram.com/v1/users/self/?access_token=${accessToken}`)
   .then(function (response) {
-    let results = response.data.data
+    var results = response.data.data
     console.log(response.data.data);
     res.render('results.pug',{searchData:results});
   })
