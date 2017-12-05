@@ -1,7 +1,7 @@
 include navigation.pug
   #Profile
-    img(style="width:120px;height:120px" src=searchData.profile_picture)
-    span @#{searchData.username}
+    img(style="width:120px;height:120px" src=alldata[1])
+    span @#{alldata[0].username}
   table  
     tr(class="tableHeader")
       th
@@ -14,13 +14,13 @@ include navigation.pug
         p User ID
     tr
       td
-        span #{searchData.counts.followed_by}
+        span #{alldata[0].followers}
       td
-        span #{searchData.counts.follows}
+        span #{alldata[0].following}
       td
-        span #{searchData.counts.media}
+        span #{alldata[0].posts}
       td
-        span #{searchData.id}
+        span #{alldata[0].id}
   //- ul.flex-container
   //-   - for (var i = recentMedia.length - 1; i >= 0; --i) {
   //-             li.flex-item 

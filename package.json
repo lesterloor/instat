@@ -20,6 +20,8 @@
     "axios": "^0.17.1",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "instagram-profile-picture": "^1.0.1",
+    "instagram-user": "^1.0.0",
     "morgan": "^1.9.0",
     "path": "^0.12.7",
     "pug": "^2.0.0-rc.4"
