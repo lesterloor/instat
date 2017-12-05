@@ -1,26 +1,84 @@
 include navigation.pug
-  #Profile
-    //- img(style="width:120px;height:120px" src=alldata[1])
-    span @#{alldata[0].username}
+  h3 iFunnymeme | Followers : #{iFunnymemeInfo.followers}
   table  
     tr(class="tableHeader")
       th
-        p Followers
+        p 1 Hour
       th
-        p Follows
+        p 3 Hours
       th
-        p Media
+        p 12 Hours
       th
-        p User ID
+        p 24 Hours
     tr
       td
-        span #{alldata[0].followers}
+        span $60
       td
-        span #{alldata[0].following}
+        span $150
       td
-        span #{alldata[0].posts}
+        span $175
       td
-        span #{alldata[0].id}
+        span $200
+  h3 Firstscenes | Followers : #{FirstscenesInfo.followers}
+  table
+    tr(class="tableHeader")
+      th
+        p 1 Hour
+      th
+        p 3 Hours
+      th
+        p 12 Hours
+      th
+        p 24 Hours
+    tr
+      td
+        span $60
+      td
+        span $150
+      td
+        span $175
+      td
+        span $200
+  h3 Waltdisney1901 | Followers : #{Waltdisney1901Info.followers}
+  table  
+    tr(class="tableHeader")
+      th
+        p 1 Hour
+      th
+        p 3 Hours
+      th
+        p 12 Hours
+      th
+        p 24 Hours
+    tr
+      td
+        span $60
+      td
+        span $150
+      td
+        span $175
+      td
+        span $200
+  h3 video.stylist | Followers : #{videostylistInfo.followers}
+  table  
+    tr(class="tableHeader")
+      th
+        p 1 Hour
+      th
+        p 3 Hours
+      th
+        p 12 Hours
+      th
+        p 24 Hours
+    tr
+      td
+        span $60
+      td
+        span $150
+      td
+        span $175
+      td
+        span $200
   //- ul.flex-container
   //-   - for (var i = recentMedia.length - 1; i >= 0; --i) {
   //-             li.flex-item 

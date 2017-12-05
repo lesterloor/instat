@@ -5,3 +5,5 @@ document.addEventListener('touchmove', function(event) {
       event.preventDefault();
     }
   }, false);
+
+$("#total").digits();

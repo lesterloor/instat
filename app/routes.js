@@ -38,11 +38,40 @@ module.exports = function(app) {
 
 
   app.get("/prices", function(req, res) {
-    res.render('prices.pug');
-  });
-  app.get("/login", function(req, res) {
+    instagramUser("iFunnymeme").then(iFunnymemeInfo => {
+        instagramUser("Firstscenes").then(FirstscenesInfo => {
+            instagramUser("Waltdisney1901").then(Waltdisney1901Info => {
+                instagramUser("video.stylist").then(videostylistInfo => {
+                    var sum = [1, 2, 3].reduce(add, 0);
 
-    res.redirect('https://api.instagram.com/oauth/authorize/?client_id=7b3b2a3e21404d9d9e05c5c548f74c0e&redirect_uri=localhost&response_type=token');
+                    function add(a, b) {
+                        return a + b;
+                        console.log(a+b);    
+                    }
+
+
+
+
+                res.render('prices.pug',{totalCount:totalCount,iFunnymemeInfo:iFunnymemeInfo,FirstscenesInfo:FirstscenesInfo,Waltdisney1901Info:Waltdisney1901Info,videostylistInfo:videostylistInfo})
+
+                })
+            })
+        })
+    })
+  });
+  app.get("/price", function(req, res) {
+    instagramUser("iFunnymeme").then(iFunnymemeInfo => {
+        instagramUser("Firstscenes").then(FirstscenesInfo => {
+            instagramUser("Waltdisney1901").then(Waltdisney1901Info => {
+                instagramUser("video.stylist").then(videostylistInfo => {
+                    instagramUser("lester").then(lesterInfo => {
+                        console.log(lesterInfo);
+                        res.render('price.pug',{iFunnymemeInfo:iFunnymemeInfo,FirstscenesInfo:FirstscenesInfo,Waltdisney1901Info:Waltdisney1901Info,videostylistInfo:videostylistInfo,lesterInfo:lesterInfo})
+                    })
+                })
+            })
+        })
+    })
   });
   app.get("*", function(req, res) {
     res.send('404 error');

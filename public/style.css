@@ -3,6 +3,7 @@ body{
   height:1000px;
 }
 
+
 table {
   width: 100%;
   max-width: 600px;
@@ -10,14 +11,16 @@ table {
   /*height: 320px;*/
   border-collapse: collapse;
   border: 1px solid #38678f;
-  margin: 50px auto 5px;
+  margin: 0px auto 5px;
   background: white;
 }
 th {
+  padding: 10px 0px 10px 5px;
+
   font-size: 14px;
   background: steelblue;
   height: 54px;
-  width: 25%;
+  text-align: left;
   font-weight: lighter;
   text-shadow: 0 1px 0 #38678f;
   color: white;
@@ -33,7 +36,8 @@ tr:last-child {
 }
 td {
   border-right: 1px solid #cccccc;
-  padding: 10px;
+  padding: 10px 0px 10px 5px;
+  text-align: left;
   transition: all 0.2s;
 }
 td:last-child {
