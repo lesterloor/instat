@@ -1,0 +1,37 @@
+include navigation.pug
+  #Profile
+    //- img(style="width:120px;height:120px" src=alldata[1])
+    span @#{alldata[0].username}
+  table  
+    tr(class="tableHeader")
+      th
+        p Followers
+      th
+        p Follows
+      th
+        p Media
+      th
+        p User ID
+    tr
+      td
+        span #{alldata[0].followers}
+      td
+        span #{alldata[0].following}
+      td
+        span #{alldata[0].posts}
+      td
+        span #{alldata[0].id}
+  //- ul.flex-container
+  //-   - for (var i = recentMedia.length - 1; i >= 0; --i) {
+  //-             li.flex-item 
+  //-               img(src=recentMedia[i].images.thumbnail.url)
+  //-               table
+  //-                 tr
+  //-                   th
+  //-                     span Likes: #{recentMedia[i].likes.count}
+  //- 
+  //-   -}
+            
+
+script(src="index.js")
+      
