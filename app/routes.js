@@ -43,7 +43,7 @@ module.exports = function(app) {
             const alldata = [userInfo,userProfilePic]
             console.log(alldata[0].username);
             console.log(alldata[1]);
-            res.render('results.pug',{alldata:alldata})
+            res.render('prices.pug',{alldata:alldata})
           });
         //=> {description: 'A wonderful description', email: 'unicorns@foo.com', ...}
     }).catch(err =>{
