@@ -21,9 +21,9 @@ module.exports = function(app) {
     console.log("User to search",req.body.search);
 
     instagramUser(req.body.search).then(userInfo => {
-      let username = userInfo.username
+      const username = userInfo.username
         ipp.medium(username).then(userProfilePic => {
-            let alldata = [userInfo,userProfilePic]
+            const alldata = [userInfo,userProfilePic]
             console.log(alldata[0].username);
             console.log(alldata[1]);
             res.render('results.pug',{alldata:alldata})
