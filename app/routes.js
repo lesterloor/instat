@@ -34,27 +34,11 @@ module.exports = function(app) {
       res.render('index.pug',{notfound:`Sorry username does not exist`})
     })
   })
-  app.get('/prices', function(req, res) {
-    // console.log("User to search",req.body.search);
-    //
-    // instagramUser(req.body.search).then(userInfo => {
-    //   const username = userInfo.username
-    //     ipp.medium(username).then(userProfilePic => {
-    //         const alldata = [userInfo,userProfilePic]
-    //         console.log(alldata[0].username);
-    //         console.log(alldata[1]);
-            res.render('prices.pug',{alldata:"alldata"})
-    //       });
-    //     //=> {description: 'A wonderful description', email: 'unicorns@foo.com', ...}
-    // }).catch(err =>{
-    //   console.log(err);
-    //   res.render('index.pug',{notfound:`Sorry username does not exist`})
-    // })
-  })
 
 
-  app.get("/policy", function(req, res) {
-    res.render('policy.pug');
+
+  app.get("/prices", function(req, res) {
+    res.render('prices.pug');
   });
   app.get("/login", function(req, res) {
 
